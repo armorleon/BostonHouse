@@ -11779,7 +11779,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11981,7 +11981,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -12162,7 +12162,7 @@ RM: Increase in value of RM will  result increase of MEDV.</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;r2_score&#39;</span>
@@ -14054,9 +14054,8 @@ Think about the pros and cons of adding more training points based on if the tra
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-My graph max-depth = 6</p>
-<p>if we add more training points added the score seems decresses. The testing curve's also appear at one level and look parllel training score.</p>
-<p>Ther is no benifit of more training points because the curve approx level off.</p>
+if we add more training points added the score seems decresses. The testing curve's also appear at one level and look parllel training score.
+Ther is no benifit of more training points because the curve approx level off.</p>
 
 </div>
 </div>
@@ -14792,8 +14791,8 @@ mMOamZmZWRNzWDMzMzNrYg5rZmZmZk3MYc3MzMysif0P/tU225MkLhoAAAAASUVORK5CYII=
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p>Model suffer from high bias, When the model is trained with maximum depth of 1. Maximum depth of 10, Model suffer from high variance.</p>
-<p>My justification based on visual cause on Validation score.</p>
+<p>As a max_depth of 1 suffers from high bias, visually this is due to the low training and validation scores(also it has low variance since the scores are close together). As this model is not complex enough to learn the structure of the data</p>
+<p>And a max_depth of 10 suffers from high variance, since we see a large gap between the training and validation scores, as we are basically just memorizing our training data and will not generalize well to new unseen data</p>
 
 </div>
 </div>
@@ -14859,7 +14858,7 @@ A Grid Search is one of the Search Methods available which helps to build all po
 max_leaf_nodes = [5,10,15]
 min_samples_size = [2,4,8,12]
 max_depth  =[10,20]</p>
-<p>So,the total combinations would be 3<em>4</em>2 = 24
+<p>So,the total combinations would be 3, 4, 2 = 24
 Through grid based method we try all these 24 combinations to train the model and then select the best combination</p>
 
 </div>
@@ -14926,7 +14925,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -14947,7 +14946,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
 
     <span class="c1"># TODO: Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)}</span>
 
     <span class="c1"># TODO: Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
